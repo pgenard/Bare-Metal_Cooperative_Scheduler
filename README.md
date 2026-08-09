@@ -63,7 +63,7 @@ $ ./aarch64-none-elf-as -mcpu=cortex-a53 -o main.o main.s
 
 ### Linker
 ```bash
-$ ./aarch64-none-elf-ld -T linker.ld -o hello.elf startup.o vectors.o exceptions.o string.o uart_imx8.o gpt.o systime.o scheduler.o main.o
+$ ./aarch64-none-elf-ld -T linker.ld -o hello.elf startup.o vectors.o exceptions.o irq.o string.o uart_imx8.o gpt.o systime.o scheduler.o main.o
  ```
 
 ### Raw Binary
