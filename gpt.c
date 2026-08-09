@@ -89,26 +89,6 @@ void gpt_init(void)
     GPT_CR |= GPT_CR_EN;
 }
 
-/* void gpt_irq_handler(struct irq_frame *frame) {
-  (void) frame;
-  GPT_REG(GPT_SR) = 1;
-  gpt_irq_received = 1;
-  GPT_REG(GPT_IR) = 0;
-} */
-
-/* void gpt_irq_handler(struct irq_frame *frame) {
-    (void) frame;
-
-    GPT_REG(GPT_SR) = GPT_SR_OF1;
-
-    if (gpt_periodic) {
-        GPT_REG(GPT_OCR1) += gpt_periodic_ticks;
-    } else {
-        gpt_irq_received = 1;
-        GPT_REG(GPT_IR) = 0;
-    }
-} */
-
 void gpt_irq_handler(struct irq_frame *frame) {
   (void) frame;
 

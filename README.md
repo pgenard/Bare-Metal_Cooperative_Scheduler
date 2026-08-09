@@ -25,7 +25,7 @@ A simple command-line interface illustrates how UART interrupts, exception handl
 
 Our QEMU emulated platform page is available here: [i.MX8MP](https://www.qemu.org/docs/master/system/arm/imx8m.html)
 
-Our DDR beginning seen by QEMU is mapped on *0x40000000* address.
+Our DDR base is mapped on *0x40000000* address.
 
 Our UART base register is mapped on *0x30860000* address.
 
@@ -52,7 +52,6 @@ $ ./aarch64-none-elf-as -mcpu=cortex-a53 -o startup.o startup.s
 $ ./aarch64-none-elf-as -mcpu=cortex-a53 -o vectors.o vectors.s
 $ ./aarch64-none-elf-as -mcpu=cortex-a53 -o exceptions.o exceptions.s
 $ ./aarch64-none-elf-as -mcpu=cortex-a53 -o string.o string.s
-$ ./aarch64-none-elf-as -mcpu=cortex-a53 -o gpt.o gpt.s
 $ ./aarch64-none-elf-as -mcpu=cortex-a53 -o uart_imx8.o uart_imx8.s
 $ ./aarch64-none-elf-as -mcpu=cortex-a53 -o gpt.o gpt.s
 $ ./aarch64-none-elf-as -mcpu=cortex-a53 -o irq.o irq.s
