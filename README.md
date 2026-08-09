@@ -40,6 +40,7 @@ The project uses the ARM GNU bare-metal toolchain: [ARM Toolchain](https://devel
 $ ./aarch64-none-elf-gcc -S -mcpu=cortex-a53 -ffreestanding -nostdlib string.c
 $ ./aarch64-none-elf-gcc -S -mcpu=cortex-a53 -ffreestanding -nostdlib gpt.c
 $ ./aarch64-none-elf-gcc -S -mcpu=cortex-a53 -ffreestanding -nostdlib uart_imx8.c
+$ ./aarch64-none-elf-gcc -S -mcpu=cortex-a53 -ffreestanding -nostdlib irq.c
 $ ./aarch64-none-elf-gcc -S -mcpu=cortex-a53 -ffreestanding -nostdlib systime.c
 $ ./aarch64-none-elf-gcc -S -mcpu=cortex-a53 -ffreestanding -nostdlib scheduler.c
 $ ./aarch64-none-elf-gcc -S -mcpu=cortex-a53 -ffreestanding -nostdlib main.c
@@ -53,6 +54,8 @@ $ ./aarch64-none-elf-as -mcpu=cortex-a53 -o exceptions.o exceptions.s
 $ ./aarch64-none-elf-as -mcpu=cortex-a53 -o string.o string.s
 $ ./aarch64-none-elf-as -mcpu=cortex-a53 -o gpt.o gpt.s
 $ ./aarch64-none-elf-as -mcpu=cortex-a53 -o uart_imx8.o uart_imx8.s
+$ ./aarch64-none-elf-as -mcpu=cortex-a53 -o gpt.o gpt.s
+$ ./aarch64-none-elf-as -mcpu=cortex-a53 -o irq.o irq.s
 $ ./aarch64-none-elf-as -mcpu=cortex-a53 -o systime.o systime.s
 $ ./aarch64-none-elf-as -mcpu=cortex-a53 -o scheduler.o scheduler.s
 $ ./aarch64-none-elf-as -mcpu=cortex-a53 -o main.o main.s
