@@ -7,27 +7,27 @@
 A simple command-line interface illustrates how UART interrupts, exception handling, timer configuration and low-level hardware access work together in a minimal bare-metal environment.
 
 ### Features
-- Bare-metal ARMv8-A startup code
-- EL2 exception vector table
-- GICv3 initialization and interrupt routing
-- Interrupt-driven UART receive
-- Circular receive buffer
-- Polling-based UART transmit
-- Simple serial command-line interface
-- Memory inspection with debug command
-- 16 MHz GPT clock source configuration
-- GPT timer delay
-- Software IRQ handler
-- Uptime command
-- Cooperative scheduler
+- Bare-metal ARMv8-A startup code,
+- EL2 exception vector table,
+- GICv3 initialization and interrupt routing,
+- Interrupt-driven UART receive,
+- Circular receive buffer,
+- Polling-based UART transmit,
+- Simple serial command-line interface,
+- Memory inspection with debug command,
+- 16 MHz GPT clock source configuration,
+- GPT timer delay,
+- Software IRQ handler,
+- Uptime command,
+- Cooperative scheduler.
 
 ### Hints
 
 Our QEMU emulated platform page is available here: [i.MX8MP](https://www.qemu.org/docs/master/system/arm/imx8m.html)
 
-Our DDR base is mapped on *0x40000000* address.
+Our DDR base is mapped at *0x40000000* address.
 
-Our UART base register is mapped on *0x30860000* address.
+Our UART base register is mapped at *0x30860000* address.
 
 ### Toolchain
 
@@ -72,7 +72,7 @@ $ ./aarch64-none-elf-objcopy -O binary hello.elf hello.bin
 
 ## Executing our Serial Shell
 ```bash
-$ ./qemu/build/qemu-system-aarch64 -M imx8mp-evk -m 512M -kernel hello.bin -no-reboot -display none -serial stdio -monitor telnet:127.0.0.1:1234,server,nowait
+$ ./qemu/build/qemu-system-aarch64 -M imx8mp-evk -m 512M -kernel hello.bin -display none -serial stdio -monitor telnet:127.0.0.1:1234,server,nowait
 [i.MX8MP Board Emulated by QEMU]
 Command> hello
 Hello !
